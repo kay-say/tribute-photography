@@ -16,6 +16,7 @@ html {
 .container {
   width: 90%;
   max-width: 1000px;
+  min-width: 400px;
   margin: 50px auto;
   -webkit-box-shadow: 0rem 0rem 5rem #777;
           box-shadow: 0rem 0rem 5rem #777;
@@ -58,20 +59,43 @@ header h1 {
   letter-spacing: 4px;
 }
 
+@media (max-width: 635px) {
+  header h1 {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 525px) {
+  header h1 {
+    font-size: 1.8rem;
+    top: 30px;
+    right: 30px;
+  }
+}
+
 header p {
   top: 110px;
   right: 60px;
   letter-spacing: 6px;
 }
 
-main {
-  padding: 3em 0 4em;
+@media (max-width: 635px) {
+  header p {
+    top: 90px;
+  }
 }
 
-main h2 {
-  text-align: center;
-  letter-spacing: 6px;
-  padding-bottom: 1em;
+@media (max-width: 525px) {
+  header p {
+    font-size: 0.7rem;
+    top: 65px;
+    right: 30px;
+    letter-spacing: 4px;
+  }
+}
+
+main {
+  padding: 4em 0;
 }
 
 main .timeline {
@@ -120,13 +144,21 @@ main .timeline > div:nth-child(odd) {
   position: relative;
 }
 
+@media (max-width: 800px) {
+  main .timeline > div:nth-child(odd) {
+    padding: 0 10px 15px 20%;
+  }
+}
+
 main .timeline > div:nth-child(odd)::before {
   content: "";
   position: absolute;
   top: 3px;
+  top: 0px;
   right: -17px;
-  width: 14px;
-  height: 14px;
+  right: -15px;
+  width: 8px;
+  height: 8px;
   border-radius: 20%;
   background-color: #777;
 }

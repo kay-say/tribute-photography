@@ -15,6 +15,7 @@ html{
 .container{
     width: 90%;
     max-width: 1000px;
+    min-width: 400px;
     margin: 50px auto;
     box-shadow: $box-shadow-heavy;
     color: $primary_color;
